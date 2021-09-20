@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.fadeIn {
+    transition: opacity 2s ease-in;
+}
+
+
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.header__logo {
+    font-size: 40px;
+    line-height: 1.6;
+    letter-spacing: 5px;
+
+}
+
+.nav {}
+
+.nav__list {
+    display: flex;
+    gap: 40px;
+}
+
+.nav__list-item {}
+
+.nav__list-link {
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-size: 20px;
+    color: rgb(102, 3, 194);
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+}
+
+.nav__list-link:visited{
+    color: rgb(102, 3, 194);
+}
+
+.nav__list-link.link--active {
+    position: relative;   
+}
+
+.nav__list-link.link--active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 3px solid rgb(123, 2, 236);
+    border-width: 100%;
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section p {
+    font-size: 64px;
+    color: aliceblue;
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+}
+
+
+
+.first {
+    background-color: rgb(72, 228, 131);
+}
+
+.second {
+    background-color: rgb(83, 137, 218);
+}
+
+.third {
+    background-color: rgb(149, 65, 218);
+}
+
+.fourth {
+    background-color: rgb(221, 59, 59);
+}
+
+.fifth {
+    background-color: rgb(234, 247, 63);
+}
+
+
+
+.scrollbar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.scrollbar__list {
+    padding: 20px 10px;
+    background-color: rgb(194, 255, 240);
+    border-radius: 20px;
+    list-style: none;
+
+}
+
+.scrollbar__list-item {}
+
+.scrollbar__list-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(24, 226, 182);
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.scrollbar__list-button:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.scrollbar__list-button.button--active {
+    background-color: rgb(25, 206, 40);
+}
+
+.scrollbar__list-item:not(:last-child) {
+    margin-bottom: 10px;
+}

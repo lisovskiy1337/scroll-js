@@ -131,10 +131,7 @@ section p {
 
 
 .scrollbar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+   
 }
 
 .scrollbar__list {
@@ -142,6 +139,10 @@ section p {
     background-color: rgb(194, 255, 240);
     border-radius: 20px;
     list-style: none;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
 
 }
 
